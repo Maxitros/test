@@ -24,12 +24,14 @@ def f2(stroka) :
 		
 t = ''
 while t != "exit" :
-	print('1.Output letters /n 2.Delete dublicate')
+	print('1.Output letters\n2.Delete dublicate')
 	t = input("What?>>" )
+	t = t.strip(' ')
+	if t != '1' or t != '2' :
+		print('Please input 1 or 2 in "What" field')
 	inp = input("Text>> ")
 	if t == "1" :
 		f1(inp)
 	elif t == '2' :
 		inp  = ' '.join(f2(inp.split()))
 		print(inp)
-		
