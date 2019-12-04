@@ -7,8 +7,8 @@ from threading import Thread
 
 # глобальные переменные
 # настройки окна
-WIDTH = 900
-HEIGHT = 300
+WIDTH =int(input("Screen width"))
+HEIGHT = int(input("Screen height"))
  
 # настройки ракеток
  
