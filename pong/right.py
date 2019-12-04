@@ -35,14 +35,18 @@ BALL_Y_SPEED = INITIAL_SPEED
 PLAYER_1_SCORE = 0
 PLAYER_2_SCORE = 0
 
-SEND_IP_PORT1 = ('127.0.0.1',10000)
-SEND_IP_PORT2 = ('127.0.0.1',10002)
-SEND_IP_PORT2_2 = ('127.0.0.1',10003)
-SEND_IP_PORT3 = ('127.0.0.1',10004)
+left_comp_ip = input("Left computer ip")
+middle_comp_ip = input("Middle computer ip")
+right_comp_ip = input("Right computer ip")
 
-RECV_IP_PORT1 = ('127.0.0.1',11000)
-RECV_IP_PORT2 = ('127.0.0.1',11001)
-RECV_IP_PORT3 = ('127.0.0.1',11002)
+SEND_IP_PORT1 = (left_comp_ip,10000)
+SEND_IP_PORT2 = (middle_comp_ip,10002)
+SEND_IP_PORT2_2 = (middle_comp_ip,10003)
+SEND_IP_PORT3 = (right_comp_ip,10004)
+
+RECV_IP_PORT1 = (left_comp_ip,11000)
+RECV_IP_PORT2 = (middle_comp_ip,11001)
+RECV_IP_PORT3 = (riht_comp_ip,11002)
 
 
 
