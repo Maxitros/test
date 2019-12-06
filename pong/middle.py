@@ -104,12 +104,7 @@ def t_func_recv() :
 
 
 def t_func_score_check():
-    f = open('score.txt','r')
-    f_read = f.read()
-    f_read = list(f_read)
-    PLAYER_1_SCORE = f_read[0]
-    PLAYER_2_SCORE = f_read[1]
-    root.after(30,t_func_score_check)
+    pass
 
 # Добавим глобальную переменную отвечающую за расстояние
 # до правого края игрового поля
@@ -117,16 +112,7 @@ right_line_distance = WIDTH - PAD_W
 
     
 def update_score(player):
-    f = open('score.txt','r')
-    f_read = f.read()
-    f_read = list(f_read)
-    if player == 'start' :
-        f_read = [0,0]
-    f.close()
-    f_read = str(f_read)
-    f = open('score.txt','w')
-    f.write(f_read)
-    f.close
+    pass
 
 def spawn_ball():
     global BALL_X_SPEED
