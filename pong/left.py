@@ -7,8 +7,8 @@ from threading import Thread
 
 # глобальные переменные
 # настройки окна
-WIDTH =int(input("Screen width"))
-HEIGHT = int(input("Screen height"))
+WIDTH = 1280
+HEIGHT = 720
  
 # настройки ракеток
  
@@ -47,7 +47,7 @@ SEND_IP_PORT3 = (right_comp_ip,10004)
 
 RECV_IP_PORT1 = (left_comp_ip,11000)
 RECV_IP_PORT2 = (middle_comp_ip,11001)
-RECV_IP_PORT3 = (riht_comp_ip,11002)
+RECV_IP_PORT3 = (right_comp_ip,11002)
 
 
 
@@ -91,29 +91,10 @@ def t_func_recv() :
 right_line_distance = WIDTH - PAD_W
 
 def t_func_score_check():
-    f = open('score.txt','r')
-    f_read = f.read()
-    f_read = list(f_read)
-    PLAYER_1_SCORE = f_read[0]
-    PLAYER_2_SCORE = f_read[1]
-    f.close()
-    root.after(30,t_func_score_check)
+    pass
 
 def update_score(player):
-    f = open('score.txt','r')
-    f_read = f.read()
-    f_read = list(f_read)
-    if player == 'left':
-        f_read[0] += 1 
-    if player == 'right': 
-        f_read[1] += 1 
-    if player == 'start' :
-        f_read = [0,0]
-    f.close()
-    f_read = str(f_read)
-    f = open('score.txt','w')
-    f.write(f_read)
-    f.close
+    pass
  
 def spawn_ball():
     global BALL_X_SPEED
